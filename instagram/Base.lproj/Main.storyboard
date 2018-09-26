@@ -114,13 +114,24 @@
             </objects>
             <point key="canvasLocation" x="2183" y="933"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="MCY-ys-NVG">
             <objects>
-                <viewController id="mWw-R6-O3E" sceneMemberID="viewController">
+                <viewController id="mWw-R6-O3E" customClass="ProfileViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Hz-0i-QqI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-n3-qao">
+                                <rect key="frame" x="94" y="379" width="169" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="mWw-R6-O3E" eventType="touchUpInside" id="uKy-Qv-Y3W"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="2Pm-QG-c86"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="mAs-2I-ahb"/>
                     </view>
@@ -128,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79o-YK-12l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="1719"/>
+            <point key="canvasLocation" x="1413.5999999999999" y="1718.5907046476764"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2UU-CS-3w1">
@@ -211,4 +222,7 @@
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="profile_tab" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Pm-QG-c86"/>
+    </inferredMetricsTieBreakers>
 </document>
