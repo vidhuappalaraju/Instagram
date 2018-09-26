@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Y9s-ob-150">
             <objects>
-                <viewController id="taP-YN-h2n" sceneMemberID="viewController">
+                <viewController id="taP-YN-h2n" customClass="HomeViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNC-FW-Dst">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ads-fR-ro6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498" y="133"/>
+            <point key="canvasLocation" x="2496.8000000000002" y="132.68365817091455"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LAU-eq-yGe">
@@ -98,21 +98,57 @@
             </objects>
             <point key="canvasLocation" x="476" y="924"/>
         </scene>
-        <!--View Controller-->
+        <!--Capture View Controller-->
         <scene sceneID="KkR-Yy-ry4">
             <objects>
-                <viewController id="bnb-LS-jH7" sceneMemberID="viewController">
+                <viewController id="bnb-LS-jH7" customClass="CaptureViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K45-Z3-CrM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kio-ac-58L">
+                                <rect key="frame" x="42" y="102" width="293" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44786031199999998" green="0.47126685099999999" blue="0.47360751299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YoC-NG-MTN" appends="YES" id="Vyb-df-mcD"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Sr-i2-k3B">
+                                <rect key="frame" x="61" y="318" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USq-aM-Tzr">
+                                <rect key="frame" x="61" y="431" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="bnb-LS-jH7" eventType="touchUpInside" id="zCc-vh-cGA"/>
+                                    <segue destination="taP-YN-h2n" kind="presentation" identifier="postSegue" id="CBC-xo-nfx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="xkx-h6-MJ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="EnT-Lw-Hzf"/>
+                    <connections>
+                        <outlet property="captionText" destination="4Sr-i2-k3B" id="rCW-1b-Hdi"/>
+                        <outlet property="postImageView" destination="kio-ac-58L" id="XrV-PQ-dkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYm-rB-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YoC-NG-MTN">
+                    <connections>
+                        <action selector="onTap:" destination="bnb-LS-jH7" id="fNs-pU-0hN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2183" y="933"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="932.38380809595208"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="MCY-ys-NVG">
@@ -223,6 +259,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="CBC-xo-nfx"/>
         <segue reference="2Pm-QG-c86"/>
     </inferredMetricsTieBreakers>
 </document>
