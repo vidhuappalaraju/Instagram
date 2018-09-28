@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2187D2AF26414EB88AF20AB16E7A24F6"
+               BlueprintIdentifier = "F1BECC2E925DDB6EED99A55B8AF3C585"
                BuildableName = "Parse.bundle"
                BlueprintName = "Parse-Parse"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2187D2AF26414EB88AF20AB16E7A24F6"
+            BlueprintIdentifier = "F1BECC2E925DDB6EED99A55B8AF3C585"
             BuildableName = "Parse.bundle"
             BlueprintName = "Parse-Parse"
             ReferencedContainer = "container:Pods.xcodeproj">
