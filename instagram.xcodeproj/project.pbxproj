@@ -18,6 +18,7 @@
 		9F05D0D8215B022700B2E992 /* instagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F05D0D7215B022700B2E992 /* instagramUITests.swift */; };
 		9F49C135215D9C1700BE53E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49C134215D9C1700BE53E1 /* Post.swift */; };
 		9F49C137215DAD9E00BE53E1 /* InstagramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49C136215DAD9E00BE53E1 /* InstagramCell.swift */; };
+		9F7E05E321644AAD002E147E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E05E221644AAD002E147E /* DetailsViewController.swift */; };
 		9FA3D2AC215B0EF000D8BE82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3D2AB215B0EF000D8BE82 /* LoginViewController.swift */; };
 		9FA3D2AE215B654C00D8BE82 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3D2AD215B654C00D8BE82 /* ProfileViewController.swift */; };
 		9FA3D2B0215BF86800D8BE82 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3D2AF215BF86800D8BE82 /* CaptureViewController.swift */; };
@@ -65,6 +66,7 @@
 		9F05D0D9215B022700B2E992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F49C134215D9C1700BE53E1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9F49C136215DAD9E00BE53E1 /* InstagramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCell.swift; sourceTree = "<group>"; };
+		9F7E05E221644AAD002E147E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9FA3D2AB215B0EF000D8BE82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../LoginViewController.swift; sourceTree = "<group>"; };
 		9FA3D2AD215B654C00D8BE82 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9FA3D2AF215BF86800D8BE82 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		9FA3D2AA215B08E000D8BE82 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F7E05E221644AAD002E147E /* DetailsViewController.swift */,
 				9FA3D2AB215B0EF000D8BE82 /* LoginViewController.swift */,
 				9F05D0B9215B022700B2E992 /* ViewController.swift */,
 				9FA3D2AD215B654C00D8BE82 /* ProfileViewController.swift */,
@@ -368,11 +371,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-instagram/Pods-instagram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
@@ -408,6 +413,7 @@
 			files = (
 				9FA3D2AC215B0EF000D8BE82 /* LoginViewController.swift in Sources */,
 				9F05D0BA215B022700B2E992 /* ViewController.swift in Sources */,
+				9F7E05E321644AAD002E147E /* DetailsViewController.swift in Sources */,
 				9FA3D2AE215B654C00D8BE82 /* ProfileViewController.swift in Sources */,
 				9F05D0B8215B022700B2E992 /* AppDelegate.swift in Sources */,
 				9F49C137215DAD9E00BE53E1 /* InstagramCell.swift in Sources */,

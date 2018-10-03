@@ -23,7 +23,6 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         // Get the image captured by the UIImagePickerController
         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
         // Do something with the images (based on your use case)
         postImageView.image = originalImage
@@ -42,7 +41,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         Post.postUserImage(image: postImageView.image, withCaption: captionText.text) { (success: Bool, error: Error?) in
             print("whatever")
-           self.performSegue(withIdentifier: "postSegue", sender: nil)
+          self.performSegue(withIdentifier: "postSegue", sender: nil)
         }
 
         

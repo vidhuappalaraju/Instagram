@@ -23,11 +23,7 @@ class ProfileViewController: UIViewController {
     }
     
 
-    @IBAction func onLogout(_ sender: Any) {
-        PFUser.logOutInBackground { (error: Error?) in
-             self.performSegue(withIdentifier: "logoutSegue", sender: nil)
-        }
-    }
+    
    
 
 }

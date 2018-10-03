@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AFNetworking
 
 class InstagramCell: UITableViewCell {
 
@@ -16,7 +17,10 @@ class InstagramCell: UITableViewCell {
         // Initialization code
     }
 
-    @IBOutlet weak var instagramPicture: PFImageView!
+   
+    
+    @IBOutlet weak var instagramPicture: UIImageView!
+    
     @IBOutlet weak var instagramCaption: UILabel!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,12 +28,15 @@ class InstagramCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+//    var instagramPost: Post! {
+//        didSet {
+//            if let urlString = instagramPost.media.url {
+//                self.instagramPicture.setImageWith(URL(string: urlString)!)
+//            }
+//
+//        }
+//    }
     
-    var instagramPost: PFObject! {
-        didSet {
-            self.instagramPicture.file = instagramPost["image"] as? PFFile
-            self.instagramPicture.loadInBackground()
-        }
-    }
+
 
 }
