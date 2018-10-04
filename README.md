@@ -48,7 +48,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![instagram_assignment](https://user-images.githubusercontent.com/8825679/46445504-d462a580-c73c-11e8-95d7-ef06c4140d8f.gif)
+![instagram_assignment](https://user-images.githubusercontent.com/8825679/46452519-d25f0d80-c761-11e8-8ba0-98d360082bf8.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
