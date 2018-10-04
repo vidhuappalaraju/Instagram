@@ -84,12 +84,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-   
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchPictures()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let photoDetailsController = segue.destination as! DetailsViewController
+        let indexPath = tableView.indexPath(for: sender as! InstagramCell)
+        let post = posts[indexPath!.row]
+        photoDetailsController.post = post
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        fetchPictures()
+//    }
     
     
     
